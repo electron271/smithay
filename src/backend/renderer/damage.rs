@@ -12,7 +12,7 @@ use crate::{
 
 use super::element::{Id, RenderElement};
 
-use super::{ImportAll, Renderer, Texture};
+use super::{Renderer, Texture};
 
 #[derive(Debug, Clone, Copy)]
 struct ElementState {
@@ -132,7 +132,7 @@ impl DamageTrackedRenderer {
     ) -> Result<Option<Vec<Rectangle<i32, Physical>>>, DamageTrackedRendererError<R>>
     where
         E: RenderElement<R>,
-        R: Renderer + ImportAll,
+        R: Renderer,
         <R as Renderer>::TextureId: Texture,
     {
         let (output_size, output_scale, output_transform) = self.mode.clone().try_into()?;
