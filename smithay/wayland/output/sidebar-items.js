@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["OutputManagerState","State of Smithay output manager"],["OutputUserData","User data for WlOutput"],["XdgOutputUserData","User data of Xdg Output"]]};
